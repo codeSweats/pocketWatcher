@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "15.12.0",
+    "npm": "7.11.2"
+  },
     "scripts": {
+      "heroku-prebuild": "npm install --dev",
       "build": "webpack",
       "start": "webpack --watch"
   },

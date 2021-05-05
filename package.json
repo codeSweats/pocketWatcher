@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "15.12.0",
+    "npm": "7.11.2"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "npm run build && node server.js",
+    "heroku-prebuild": "npm install --dev",
     "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
     "server": "nodemon server.js --ignore public",
     "build": "cd public && npm run build",
