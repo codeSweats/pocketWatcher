@@ -10,7 +10,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "npm run build && node server.js",
-    "heroku-prebuild": "npm install --dev",
+    "heroku-postbuild": "webpack -p", 
     "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
     "server": "nodemon server.js --ignore public",
     "build": "cd public && npm run build",
@@ -31,7 +31,7 @@
     "compression": "^1.7.4",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
-    "lite-server": "^2.5.3",
+    "lite-server": "^2.1.0",
     "mongoose": "^5.5.15",
     "morgan": "^1.9.1"
   },
