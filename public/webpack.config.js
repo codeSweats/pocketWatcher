@@ -6,10 +6,10 @@ const config = {
         app: './index.js'
     },
     output: {
-        path: _dirname + '/dist',
-        filename: 'bundle.js',
+        path: __dirname + '/public/dist',
+        filename: '[name].bundle.js',
     },
-    mode: 'development',
+    mode: 'production',
     module: {
         rules: [
             {
@@ -36,10 +36,15 @@ const config = {
             start_url: '/',
             icons: [
                 {
-                    src: path.resolve('public/icons/icon-512x512.png'),
-                    sizes: [192, 512],
+                    src: path.resolve('./icons/icon-512x512.png'),
+                    sizes: [512],
                     destination: path.join('assets', 'icons'),
                 },
+                {
+                    src: path.resolve('./icons/icon-192x192.png'),
+                    sizes: [192],
+                    destination: path.join('assets', 'icons'),
+                }
             ],
         }),
     ],
