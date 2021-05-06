@@ -10,7 +10,6 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "npm run build && node server.js",
-    "heroku-postbuild": "webpack -p", 
     "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
     "server": "nodemon server.js --ignore public",
     "build": "cd public && npm run build",
