@@ -14,18 +14,11 @@
     "server": "nodemon server.js --ignore public",
     "build": "cd public && npm run build",
     "install": "cd public && npm install",
+    "heroku-prebuild": "npm install --dev",
     "public": "cd public && npm start"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/coding-boot-camp/unit18hw/issues"
-  },
-  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",

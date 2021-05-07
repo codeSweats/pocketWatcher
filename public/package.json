@@ -9,6 +9,7 @@
   },
     "scripts": {
       "heroku-postbuild": "webpack -p", 
+      "heroku-prebuild": "npm install --dev",
       "build": "webpack",
       "start": "webpack --watch"
   },
